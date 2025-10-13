@@ -1,0 +1,10 @@
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeConsola\bin\Debug\LaPapeConsola.exe.config
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeConsola\bin\Debug\LaPapeConsola.exe
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeConsola\bin\Debug\LaPapeConsola.pdb
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeConsola\bin\Debug\Contratos.dll
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeConsola\bin\Debug\Entidades.dll
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeConsola\bin\Debug\Contratos.pdb
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeConsola\bin\Debug\Entidades.pdb
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeConsola\obj\Debug\LaPapeConsola.csprojResolveAssemblyReference.cache
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeConsola\obj\Debug\LaPapeConsola.exe
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeConsola\obj\Debug\LaPapeConsola.pdb

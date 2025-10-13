@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LaPapeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cat_Familias_Productos">
+    <Key>
+      <PropertyRef Name="Id_Familia_Producto" />
+    </Key>
+    <Property Name="Id_Familia_Producto" Type="int" Nullable="false" />
+    <Property Name="Descripcion_Familia_Prodcuto" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cat_Grupos_Productos">
+    <Key>
+      <PropertyRef Name="Id_Grupo_Producto" />
+    </Key>
+    <Property Name="Id_Grupo_Producto" Type="int" Nullable="false" />
+    <Property Name="Descripcion_Grupo_Producto" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cat_Marcas_Prodcutos">
+    <Key>
+      <PropertyRef Name="Id_Marca_Prodcuto" />
+    </Key>
+    <Property Name="Id_Marca_Prodcuto" Type="int" Nullable="false" />
+    <Property Name="Descripcion_Marca_Prodcuto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descripcion_Submarca_Prodcuto" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cat_Provedores">
+    <Key>
+      <PropertyRef Name="Id_Proveedor" />
+    </Key>
+    <Property Name="Id_Proveedor" Type="int" Nullable="false" />
+    <Property Name="Nombre_Proveedor" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Direccion_1_Proveedor" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Direccion_2_Proveedor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Direccion_3_Proveedor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefono_1_Provedor" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telefono_2_Provedor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefono_3_Provedor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Id_Nota" Type="int" />
+  </EntityType>
+  <EntityType Name="Cat_Tipos_Prodcutos">
+    <Key>
+      <PropertyRef Name="Id_Tipo_Prodcuto" />
+    </Key>
+    <Property Name="Id_Tipo_Prodcuto" Type="int" Nullable="false" />
+    <Property Name="Descripcion_Tipo_Prodcuto" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notas">
+    <Key>
+      <PropertyRef Name="Id_Nota" />
+    </Key>
+    <Property Name="Id_Nota" Type="int" Nullable="false" />
+    <Property Name="Nota" Type="nvarchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Precios_Prodcutos">
+    <Key>
+      <PropertyRef Name="Id_Precios_Producto" />
+    </Key>
+    <Property Name="Id_Precios_Producto" Type="int" Nullable="false" />
+    <Property Name="Costo_Mes_Actual" Type="money" Nullable="false" />
+    <Property Name="Costo_Mes_Anterior" Type="money" Nullable="false" />
+    <Property Name="Costo_Unitario" Type="money" Nullable="false" />
+    <Property Name="Costo_Paqeute" Type="money" Nullable="false" />
+    <Property Name="Min_Precio_Unidad_Publico" Type="money" Nullable="false" />
+    <Property Name="Precio_Unidad_Publico" Type="money" Nullable="false" />
+    <Property Name="Porciento_Aplicado" Type="int" Nullable="false" />
+    <Property Name="Min_Precio_Paquete_Publico" Type="money" Nullable="false" />
+    <Property Name="Precio_Paquete_Publico" Type="money" Nullable="false" />
+    <Property Name="Id_Nota" Type="int" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="SKU" />
+    </Key>
+    <Property Name="SKU" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Id_Producto" Type="int" Nullable="false" />
+    <Property Name="Id_Tipo_Producto" Type="int" Nullable="false" />
+    <Property Name="Descripcion_Producto" Type="varbinary" MaxLength="50" Nullable="false" />
+    <Property Name="Tamaño_Producto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contenido_Prodcuto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Id_Grupo_Producto" Type="int" Nullable="false" />
+    <Property Name="Id_Familia_Producto" Type="int" Nullable="false" />
+    <Property Name="Id_Marca_Prodcuto" Type="int" Nullable="false" />
+    <Property Name="Id_Precios_Producto" Type="int" Nullable="false" />
+    <Property Name="Id_Proveedor" Type="int" Nullable="false" />
+    <Property Name="Id_Unidades_Paquetes" Type="int" Nullable="false" />
+    <Property Name="Id_Nota" Type="int" />
+  </EntityType>
+  <EntityType Name="Productos_Unidades_Paquetes">
+    <Key>
+      <PropertyRef Name="Id_Unidades_Paquetes" />
+    </Key>
+    <Property Name="Id_Unidades_Paquetes" Type="int" Nullable="false" />
+    <Property Name="Tipo_Compra" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Piezas_Por_Paquete" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Cat_Provedores_Notas1">
+    <End Role="Notas" Type="Self.Notas" Multiplicity="0..1" />
+    <End Role="Cat_Provedores" Type="Self.Cat_Provedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notas">
+        <PropertyRef Name="Id_Nota" />
+      </Principal>
+      <Dependent Role="Cat_Provedores">
+        <PropertyRef Name="Id_Nota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Precios_Prodcutos_Notas">
+    <End Role="Notas" Type="Self.Notas" Multiplicity="0..1" />
+    <End Role="Precios_Prodcutos" Type="Self.Precios_Prodcutos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notas">
+        <PropertyRef Name="Id_Nota" />
+      </Principal>
+      <Dependent Role="Precios_Prodcutos">
+        <PropertyRef Name="Id_Nota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Cat_Familias_Productos">
+    <End Role="Cat_Familias_Productos" Type="Self.Cat_Familias_Productos" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cat_Familias_Productos">
+        <PropertyRef Name="Id_Familia_Producto" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Familia_Producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Cat_Grupos_Productos">
+    <End Role="Cat_Grupos_Productos" Type="Self.Cat_Grupos_Productos" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cat_Grupos_Productos">
+        <PropertyRef Name="Id_Grupo_Producto" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Grupo_Producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Cat_Marcas_Prodcutos">
+    <End Role="Cat_Marcas_Prodcutos" Type="Self.Cat_Marcas_Prodcutos" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cat_Marcas_Prodcutos">
+        <PropertyRef Name="Id_Marca_Prodcuto" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Marca_Prodcuto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Cat_Provedores">
+    <End Role="Cat_Provedores" Type="Self.Cat_Provedores" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cat_Provedores">
+        <PropertyRef Name="Id_Proveedor" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Proveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Cat_Tipos_Prodcutos">
+    <End Role="Cat_Tipos_Prodcutos" Type="Self.Cat_Tipos_Prodcutos" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cat_Tipos_Prodcutos">
+        <PropertyRef Name="Id_Tipo_Prodcuto" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Tipo_Producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Notas">
+    <End Role="Notas" Type="Self.Notas" Multiplicity="0..1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notas">
+        <PropertyRef Name="Id_Nota" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Nota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Precios_Prodcutos">
+    <End Role="Precios_Prodcutos" Type="Self.Precios_Prodcutos" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Precios_Prodcutos">
+        <PropertyRef Name="Id_Precios_Producto" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Precios_Producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Productos_Unidades_Paquetes">
+    <End Role="Productos_Unidades_Paquetes" Type="Self.Productos_Unidades_Paquetes" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_Unidades_Paquetes">
+        <PropertyRef Name="Id_Unidades_Paquetes" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Unidades_Paquetes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LaPapeModelStoreContainer">
+    <EntitySet Name="Cat_Familias_Productos" EntityType="Self.Cat_Familias_Productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cat_Grupos_Productos" EntityType="Self.Cat_Grupos_Productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cat_Marcas_Prodcutos" EntityType="Self.Cat_Marcas_Prodcutos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cat_Provedores" EntityType="Self.Cat_Provedores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cat_Tipos_Prodcutos" EntityType="Self.Cat_Tipos_Prodcutos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notas" EntityType="Self.Notas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Precios_Prodcutos" EntityType="Self.Precios_Prodcutos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Productos_Unidades_Paquetes" EntityType="Self.Productos_Unidades_Paquetes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Cat_Provedores_Notas1" Association="Self.FK_Cat_Provedores_Notas1">
+      <End Role="Notas" EntitySet="Notas" />
+      <End Role="Cat_Provedores" EntitySet="Cat_Provedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Precios_Prodcutos_Notas" Association="Self.FK_Precios_Prodcutos_Notas">
+      <End Role="Notas" EntitySet="Notas" />
+      <End Role="Precios_Prodcutos" EntitySet="Precios_Prodcutos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Cat_Familias_Productos" Association="Self.FK_Productos_Cat_Familias_Productos">
+      <End Role="Cat_Familias_Productos" EntitySet="Cat_Familias_Productos" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Cat_Grupos_Productos" Association="Self.FK_Productos_Cat_Grupos_Productos">
+      <End Role="Cat_Grupos_Productos" EntitySet="Cat_Grupos_Productos" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Cat_Marcas_Prodcutos" Association="Self.FK_Productos_Cat_Marcas_Prodcutos">
+      <End Role="Cat_Marcas_Prodcutos" EntitySet="Cat_Marcas_Prodcutos" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Cat_Provedores" Association="Self.FK_Productos_Cat_Provedores">
+      <End Role="Cat_Provedores" EntitySet="Cat_Provedores" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Cat_Tipos_Prodcutos" Association="Self.FK_Productos_Cat_Tipos_Prodcutos">
+      <End Role="Cat_Tipos_Prodcutos" EntitySet="Cat_Tipos_Prodcutos" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Notas" Association="Self.FK_Productos_Notas">
+      <End Role="Notas" EntitySet="Notas" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Precios_Prodcutos" Association="Self.FK_Productos_Precios_Prodcutos">
+      <End Role="Precios_Prodcutos" EntitySet="Precios_Prodcutos" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Productos_Unidades_Paquetes" Association="Self.FK_Productos_Productos_Unidades_Paquetes">
+      <End Role="Productos_Unidades_Paquetes" EntitySet="Productos_Unidades_Paquetes" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

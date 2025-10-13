@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="07442ac6-26b9-4ebc-91f8-991d6c8414e8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:60309/LaPape.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LaPape.wsdl" MetadataType="Wsdl" ID="aeb79846-4b85-427a-8975-96296ac9dc3d" SourceId="1" SourceUrl="http://localhost:60309/LaPape.svc?wsdl" />
+    <MetadataFile FileName="LaPape.xsd" MetadataType="Schema" ID="cf2dc96f-30d2-4a15-9f0b-556123be703a" SourceId="1" SourceUrl="http://localhost:60309/LaPape.svc?xsd=xsd2" />
+    <MetadataFile FileName="LaPape.disco" MetadataType="Disco" ID="87f9fab3-0e68-4a76-9ea4-bb660887f5dc" SourceId="1" SourceUrl="http://localhost:60309/LaPape.svc?disco" />
+    <MetadataFile FileName="LaPape1.xsd" MetadataType="Schema" ID="4148ada2-7910-476d-8954-057cafb10815" SourceId="1" SourceUrl="http://localhost:60309/LaPape.svc?xsd=xsd1" />
+    <MetadataFile FileName="LaPape2.xsd" MetadataType="Schema" ID="9202b9dd-0173-4439-9470-e91c33f0a76c" SourceId="1" SourceUrl="http://localhost:60309/LaPape.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

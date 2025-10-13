@@ -1,0 +1,4 @@
+g:\documents\visual studio 2015\Projects\LaPape\Entidades\bin\Debug\Entidades.dll
+g:\documents\visual studio 2015\Projects\LaPape\Entidades\bin\Debug\Entidades.pdb
+g:\documents\visual studio 2015\Projects\LaPape\Entidades\obj\Debug\Entidades.dll
+g:\documents\visual studio 2015\Projects\LaPape\Entidades\obj\Debug\Entidades.pdb

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="40fc988f-7c35-42db-b3a1-0667017a78d2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:60309/LaPape.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LaPape.wsdl" MetadataType="Wsdl" ID="76959e08-56b8-4ae5-88f5-d8110681a20e" SourceId="1" SourceUrl="http://localhost:60309/LaPape.svc?wsdl" />
+    <MetadataFile FileName="LaPape.xsd" MetadataType="Schema" ID="18cd8284-8998-4d9b-a03f-b1898e4f1d9c" SourceId="1" SourceUrl="http://localhost:60309/LaPape.svc?xsd=xsd2" />
+    <MetadataFile FileName="LaPape.disco" MetadataType="Disco" ID="c2ad1eef-ea84-4139-b522-41b6d1a63713" SourceId="1" SourceUrl="http://localhost:60309/LaPape.svc?disco" />
+    <MetadataFile FileName="LaPape1.xsd" MetadataType="Schema" ID="8041e16b-6c87-41c6-8967-0687706cccc6" SourceId="1" SourceUrl="http://localhost:60309/LaPape.svc?xsd=xsd1" />
+    <MetadataFile FileName="LaPape2.xsd" MetadataType="Schema" ID="d908c839-e4b6-439d-b157-9984a790d872" SourceId="1" SourceUrl="http://localhost:60309/LaPape.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,7 @@
+g:\documents\visual studio 2015\Projects\LaPape\Contratos\bin\Debug\Contratos.dll
+g:\documents\visual studio 2015\Projects\LaPape\Contratos\bin\Debug\Contratos.pdb
+g:\documents\visual studio 2015\Projects\LaPape\Contratos\bin\Debug\Entidades.dll
+g:\documents\visual studio 2015\Projects\LaPape\Contratos\bin\Debug\Entidades.pdb
+g:\documents\visual studio 2015\Projects\LaPape\Contratos\obj\Debug\Contratos.csprojResolveAssemblyReference.cache
+g:\documents\visual studio 2015\Projects\LaPape\Contratos\obj\Debug\Contratos.dll
+g:\documents\visual studio 2015\Projects\LaPape\Contratos\obj\Debug\Contratos.pdb

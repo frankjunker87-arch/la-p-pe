@@ -1,0 +1,9 @@
+g:\documents\visual studio 2015\Projects\LaPape\LaPape-DataTable\bin\Debug\LaPape-DataTable.exe.config
+g:\documents\visual studio 2015\Projects\LaPape\LaPape-DataTable\bin\Debug\LaPape-DataTable.exe
+g:\documents\visual studio 2015\Projects\LaPape\LaPape-DataTable\bin\Debug\LaPape-DataTable.pdb
+g:\documents\visual studio 2015\Projects\LaPape\LaPape-DataTable\obj\Debug\LaPape-DataTable.csprojResolveAssemblyReference.cache
+g:\documents\visual studio 2015\Projects\LaPape\LaPape-DataTable\obj\Debug\LaPape_DataTable.Form1.resources
+g:\documents\visual studio 2015\Projects\LaPape\LaPape-DataTable\obj\Debug\LaPape_DataTable.Properties.Resources.resources
+g:\documents\visual studio 2015\Projects\LaPape\LaPape-DataTable\obj\Debug\LaPape-DataTable.csproj.GenerateResource.Cache
+g:\documents\visual studio 2015\Projects\LaPape\LaPape-DataTable\obj\Debug\LaPape-DataTable.exe
+g:\documents\visual studio 2015\Projects\LaPape\LaPape-DataTable\obj\Debug\LaPape-DataTable.pdb

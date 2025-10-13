@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Entidades" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cat_Familias_Productos" nillable="true" type="tns:Cat_Familias_Productos" />
+      <xs:element minOccurs="0" name="Cat_Grupos_Productos" nillable="true" type="tns:Cat_Grupos_Productos" />
+      <xs:element minOccurs="0" name="Cat_Marcas_Prodcutos" nillable="true" type="tns:Cat_Marcas_Prodcutos" />
+      <xs:element minOccurs="0" name="Cat_Provedores" nillable="true" type="tns:Cat_Provedores" />
+      <xs:element minOccurs="0" name="Cat_Tipos_Prodcutos" nillable="true" type="tns:Cat_Tipos_Prodcutos" />
+      <xs:element minOccurs="0" name="Contenido_Prodcuto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion_Producto" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Id_Familia_Producto" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Grupo_Producto" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Marca_Prodcuto" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Nota" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Precios_Producto" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Producto" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Proveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Tipo_Producto" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Unidades_Paquetes" type="xs:int" />
+      <xs:element minOccurs="0" name="Nota" nillable="true" type="tns:Nota" />
+      <xs:element minOccurs="0" name="Precios_Prodcutos" nillable="true" type="tns:Precios_Prodcutos" />
+      <xs:element minOccurs="0" name="Productos_Unidades_Paquetes" nillable="true" type="tns:Productos_Unidades_Paquetes" />
+      <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tamaño_Producto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Producto" nillable="true" type="tns:Producto" />
+  <xs:complexType name="Cat_Familias_Productos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion_Familia_Prodcuto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Familia_Producto" type="xs:int" />
+      <xs:element minOccurs="0" name="Productos" nillable="true" type="tns:ArrayOfProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cat_Familias_Productos" nillable="true" type="tns:Cat_Familias_Productos" />
+  <xs:complexType name="ArrayOfProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Producto" nillable="true" type="tns:Producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProducto" nillable="true" type="tns:ArrayOfProducto" />
+  <xs:complexType name="Cat_Grupos_Productos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion_Grupo_Producto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Grupo_Producto" type="xs:int" />
+      <xs:element minOccurs="0" name="Productos" nillable="true" type="tns:ArrayOfProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cat_Grupos_Productos" nillable="true" type="tns:Cat_Grupos_Productos" />
+  <xs:complexType name="Cat_Marcas_Prodcutos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion_Marca_Prodcuto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion_Submarca_Prodcuto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Marca_Prodcuto" type="xs:int" />
+      <xs:element minOccurs="0" name="Productos" nillable="true" type="tns:ArrayOfProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cat_Marcas_Prodcutos" nillable="true" type="tns:Cat_Marcas_Prodcutos" />
+  <xs:complexType name="Cat_Provedores">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Direccion_1_Proveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion_2_Proveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion_3_Proveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Nota" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Proveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre_Proveedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nota" nillable="true" type="tns:Nota" />
+      <xs:element minOccurs="0" name="Productos" nillable="true" type="tns:ArrayOfProducto" />
+      <xs:element minOccurs="0" name="Telefono_1_Provedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono_2_Provedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono_3_Provedor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cat_Provedores" nillable="true" type="tns:Cat_Provedores" />
+  <xs:complexType name="Nota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cat_Provedores" nillable="true" type="tns:ArrayOfCat_Provedores" />
+      <xs:element minOccurs="0" name="Id_Nota" type="xs:int" />
+      <xs:element minOccurs="0" name="Nota1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Precios_Prodcutos" nillable="true" type="tns:ArrayOfPrecios_Prodcutos" />
+      <xs:element minOccurs="0" name="Productos" nillable="true" type="tns:ArrayOfProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Nota" nillable="true" type="tns:Nota" />
+  <xs:complexType name="ArrayOfCat_Provedores">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cat_Provedores" nillable="true" type="tns:Cat_Provedores" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCat_Provedores" nillable="true" type="tns:ArrayOfCat_Provedores" />
+  <xs:complexType name="ArrayOfPrecios_Prodcutos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Precios_Prodcutos" nillable="true" type="tns:Precios_Prodcutos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrecios_Prodcutos" nillable="true" type="tns:ArrayOfPrecios_Prodcutos" />
+  <xs:complexType name="Precios_Prodcutos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Costo_Mes_Actual" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Costo_Mes_Anterior" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Costo_Paqeute" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Costo_Unitario" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id_Nota" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_Precios_Producto" type="xs:int" />
+      <xs:element minOccurs="0" name="Min_Precio_Paquete_Publico" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Min_Precio_Unidad_Publico" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Nota" nillable="true" type="tns:Nota" />
+      <xs:element minOccurs="0" name="Porciento_Aplicado" type="xs:int" />
+      <xs:element minOccurs="0" name="Precio_Paquete_Publico" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Precio_Unidad_Publico" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Productos" nillable="true" type="tns:ArrayOfProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Precios_Prodcutos" nillable="true" type="tns:Precios_Prodcutos" />
+  <xs:complexType name="Cat_Tipos_Prodcutos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion_Tipo_Prodcuto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_Tipo_Prodcuto" type="xs:int" />
+      <xs:element minOccurs="0" name="Productos" nillable="true" type="tns:ArrayOfProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cat_Tipos_Prodcutos" nillable="true" type="tns:Cat_Tipos_Prodcutos" />
+  <xs:complexType name="Productos_Unidades_Paquetes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_Unidades_Paquetes" type="xs:int" />
+      <xs:element minOccurs="0" name="Piezas_Por_Paquete" type="xs:int" />
+      <xs:element minOccurs="0" name="Productos" nillable="true" type="tns:ArrayOfProducto" />
+      <xs:element minOccurs="0" name="Tipo_Compra" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Productos_Unidades_Paquetes" nillable="true" type="tns:Productos_Unidades_Paquetes" />
+  <xs:complexType name="ArrayOfCat_Familias_Productos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cat_Familias_Productos" nillable="true" type="tns:Cat_Familias_Productos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCat_Familias_Productos" nillable="true" type="tns:ArrayOfCat_Familias_Productos" />
+  <xs:complexType name="ArrayOfCat_Grupos_Productos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cat_Grupos_Productos" nillable="true" type="tns:Cat_Grupos_Productos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCat_Grupos_Productos" nillable="true" type="tns:ArrayOfCat_Grupos_Productos" />
+  <xs:complexType name="ArrayOfCat_Marcas_Prodcutos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cat_Marcas_Prodcutos" nillable="true" type="tns:Cat_Marcas_Prodcutos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCat_Marcas_Prodcutos" nillable="true" type="tns:ArrayOfCat_Marcas_Prodcutos" />
+  <xs:complexType name="ArrayOfNota">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Nota" nillable="true" type="tns:Nota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNota" nillable="true" type="tns:ArrayOfNota" />
+  <xs:complexType name="ArrayOfCat_Tipos_Prodcutos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cat_Tipos_Prodcutos" nillable="true" type="tns:Cat_Tipos_Prodcutos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCat_Tipos_Prodcutos" nillable="true" type="tns:ArrayOfCat_Tipos_Prodcutos" />
+  <xs:complexType name="ArrayOfProductos_Unidades_Paquetes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Productos_Unidades_Paquetes" nillable="true" type="tns:Productos_Unidades_Paquetes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductos_Unidades_Paquetes" nillable="true" type="tns:ArrayOfProductos_Unidades_Paquetes" />
+</xs:schema>

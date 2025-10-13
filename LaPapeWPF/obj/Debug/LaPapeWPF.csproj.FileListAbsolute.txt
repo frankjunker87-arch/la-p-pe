@@ -1,0 +1,8 @@
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeWPF\obj\Debug\LaPapeWPF.csprojResolveAssemblyReference.cache
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeWPF\obj\Debug\MainWindow.g.cs
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeWPF\obj\Debug\Vistas\Producto.g.cs
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeWPF\obj\Debug\Vistas\VGrupo.g.cs
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeWPF\obj\Debug\App.g.cs
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeWPF\obj\Debug\LaPapeWPF_MarkupCompile.cache
+g:\documents\visual studio 2015\Projects\LaPape\LaPapeWPF\obj\Debug\LaPapeWPF_MarkupCompile.lref

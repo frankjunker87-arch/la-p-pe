@@ -1,0 +1,11 @@
+g:\documents\visual studio 2015\Projects\LaPape\CapaLogica\bin\Debug\CapaLogica.dll
+g:\documents\visual studio 2015\Projects\LaPape\CapaLogica\bin\Debug\CapaLogica.pdb
+g:\documents\visual studio 2015\Projects\LaPape\CapaLogica\bin\Debug\CapaDatos.dll
+g:\documents\visual studio 2015\Projects\LaPape\CapaLogica\bin\Debug\Entidades.dll
+g:\documents\visual studio 2015\Projects\LaPape\CapaLogica\bin\Debug\EntityFramework.dll
+g:\documents\visual studio 2015\Projects\LaPape\CapaLogica\bin\Debug\CapaDatos.pdb
+g:\documents\visual studio 2015\Projects\LaPape\CapaLogica\bin\Debug\Entidades.pdb
+g:\documents\visual studio 2015\Projects\LaPape\CapaLogica\bin\Debug\EntityFramework.xml
+g:\documents\visual studio 2015\Projects\LaPape\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
+g:\documents\visual studio 2015\Projects\LaPape\CapaLogica\obj\Debug\CapaLogica.dll
+g:\documents\visual studio 2015\Projects\LaPape\CapaLogica\obj\Debug\CapaLogica.pdb

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e341f30b53cb493891218b8a75ec4ab4" Name="Diagram1">
+        <EntityTypeShape EntityType="LaPapeModel.Cat_Familias_Productos" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaPapeModel.Cat_Grupos_Productos" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaPapeModel.Cat_Marcas_Prodcutos" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaPapeModel.Cat_Provedores" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaPapeModel.Cat_Tipos_Prodcutos" Width="1.5" PointX="3" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaPapeModel.Nota" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaPapeModel.Precios_Prodcutos" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaPapeModel.Producto" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LaPapeModel.Productos_Unidades_Paquetes" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <AssociationConnector Association="LaPapeModel.FK_Productos_Cat_Familias_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="LaPapeModel.FK_Productos_Cat_Grupos_Productos" ManuallyRouted="false" />
+        <AssociationConnector Association="LaPapeModel.FK_Productos_Cat_Marcas_Prodcutos" ManuallyRouted="false" />
+        <AssociationConnector Association="LaPapeModel.FK_Cat_Provedores_Notas1" ManuallyRouted="false" />
+        <AssociationConnector Association="LaPapeModel.FK_Productos_Cat_Provedores" ManuallyRouted="false" />
+        <AssociationConnector Association="LaPapeModel.FK_Productos_Cat_Tipos_Prodcutos" ManuallyRouted="false" />
+        <AssociationConnector Association="LaPapeModel.FK_Precios_Prodcutos_Notas" ManuallyRouted="false" />
+        <AssociationConnector Association="LaPapeModel.FK_Productos_Notas" ManuallyRouted="false" />
+        <AssociationConnector Association="LaPapeModel.FK_Productos_Precios_Prodcutos" ManuallyRouted="false" />
+        <AssociationConnector Association="LaPapeModel.FK_Productos_Productos_Unidades_Paquetes" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LaPapeModel.sysdiagram" Width="1.5" PointX="7.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

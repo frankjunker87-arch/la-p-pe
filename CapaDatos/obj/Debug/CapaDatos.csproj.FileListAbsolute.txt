@@ -1,0 +1,12 @@
+g:\documents\visual studio 2015\Projects\LaPape\CapaDatos\bin\Debug\CapaDatos.dll.config
+g:\documents\visual studio 2015\Projects\LaPape\CapaDatos\bin\Debug\CapaDatos.dll
+g:\documents\visual studio 2015\Projects\LaPape\CapaDatos\bin\Debug\CapaDatos.pdb
+g:\documents\visual studio 2015\Projects\LaPape\CapaDatos\bin\Debug\Entidades.dll
+g:\documents\visual studio 2015\Projects\LaPape\CapaDatos\bin\Debug\EntityFramework.dll
+g:\documents\visual studio 2015\Projects\LaPape\CapaDatos\bin\Debug\EntityFramework.SqlServer.dll
+g:\documents\visual studio 2015\Projects\LaPape\CapaDatos\bin\Debug\Entidades.pdb
+g:\documents\visual studio 2015\Projects\LaPape\CapaDatos\bin\Debug\EntityFramework.xml
+g:\documents\visual studio 2015\Projects\LaPape\CapaDatos\bin\Debug\EntityFramework.SqlServer.xml
+g:\documents\visual studio 2015\Projects\LaPape\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+g:\documents\visual studio 2015\Projects\LaPape\CapaDatos\obj\Debug\CapaDatos.dll
+g:\documents\visual studio 2015\Projects\LaPape\CapaDatos\obj\Debug\CapaDatos.pdb

@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LaPapeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cat_Familias_Productos">
+    <Key>
+      <PropertyRef Name="Id_Familia_Producto" />
+    </Key>
+    <Property Name="Id_Familia_Producto" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion_Familia_Prodcuto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Productos" Relationship="Self.FK_Productos_Cat_Familias_Productos" FromRole="Cat_Familias_Productos" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Cat_Grupos_Productos">
+    <Key>
+      <PropertyRef Name="Id_Grupo_Producto" />
+    </Key>
+    <Property Name="Id_Grupo_Producto" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion_Grupo_Producto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Productos" Relationship="Self.FK_Productos_Cat_Grupos_Productos" FromRole="Cat_Grupos_Productos" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Cat_Marcas_Prodcutos">
+    <Key>
+      <PropertyRef Name="Id_Marca_Prodcuto" />
+    </Key>
+    <Property Name="Id_Marca_Prodcuto" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion_Marca_Prodcuto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Descripcion_Submarca_Prodcuto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Productos" Relationship="Self.FK_Productos_Cat_Marcas_Prodcutos" FromRole="Cat_Marcas_Prodcutos" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Cat_Provedores">
+    <Key>
+      <PropertyRef Name="Id_Proveedor" />
+    </Key>
+    <Property Name="Id_Proveedor" Type="Int32" Nullable="false" />
+    <Property Name="Nombre_Proveedor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Direccion_1_Proveedor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Direccion_2_Proveedor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Direccion_3_Proveedor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono_1_Provedor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telefono_2_Provedor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono_3_Provedor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Id_Nota" Type="Int32" />
+    <NavigationProperty Name="Nota" Relationship="Self.FK_Cat_Provedores_Notas1" FromRole="Cat_Provedores" ToRole="Notas" />
+    <NavigationProperty Name="Productos" Relationship="Self.FK_Productos_Cat_Provedores" FromRole="Cat_Provedores" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Cat_Tipos_Prodcutos">
+    <Key>
+      <PropertyRef Name="Id_Tipo_Prodcuto" />
+    </Key>
+    <Property Name="Id_Tipo_Prodcuto" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion_Tipo_Prodcuto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Productos" Relationship="Self.FK_Productos_Cat_Tipos_Prodcutos" FromRole="Cat_Tipos_Prodcutos" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Nota">
+    <Key>
+      <PropertyRef Name="Id_Nota" />
+    </Key>
+    <Property Name="Id_Nota" Type="Int32" Nullable="false" />
+    <Property Name="Nota1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Cat_Provedores" Relationship="Self.FK_Cat_Provedores_Notas1" FromRole="Notas" ToRole="Cat_Provedores" />
+    <NavigationProperty Name="Precios_Prodcutos" Relationship="Self.FK_Precios_Prodcutos_Notas" FromRole="Notas" ToRole="Precios_Prodcutos" />
+    <NavigationProperty Name="Productos" Relationship="Self.FK_Productos_Notas" FromRole="Notas" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Precios_Prodcutos">
+    <Key>
+      <PropertyRef Name="Id_Precios_Producto" />
+    </Key>
+    <Property Name="Id_Precios_Producto" Type="Int32" Nullable="false" />
+    <Property Name="Costo_Mes_Actual" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Costo_Mes_Anterior" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Costo_Unitario" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Costo_Paqeute" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Min_Precio_Unidad_Publico" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Precio_Unidad_Publico" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Porciento_Aplicado" Type="Int32" Nullable="false" />
+    <Property Name="Min_Precio_Paquete_Publico" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Precio_Paquete_Publico" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Id_Nota" Type="Int32" />
+    <NavigationProperty Name="Nota" Relationship="Self.FK_Precios_Prodcutos_Notas" FromRole="Precios_Prodcutos" ToRole="Notas" />
+    <NavigationProperty Name="Productos" Relationship="Self.FK_Productos_Precios_Prodcutos" FromRole="Precios_Prodcutos" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="SKU" />
+    </Key>
+    <Property Name="SKU" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Id_Producto" Type="Int32" Nullable="false" />
+    <Property Name="Id_Tipo_Producto" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion_Producto" Type="Binary" MaxLength="50" FixedLength="false" Nullable="false" />
+    <Property Name="Tamaño_Producto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contenido_Prodcuto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Id_Grupo_Producto" Type="Int32" Nullable="false" />
+    <Property Name="Id_Familia_Producto" Type="Int32" Nullable="false" />
+    <Property Name="Id_Marca_Prodcuto" Type="Int32" Nullable="false" />
+    <Property Name="Id_Precios_Producto" Type="Int32" Nullable="false" />
+    <Property Name="Id_Proveedor" Type="Int32" Nullable="false" />
+    <Property Name="Id_Unidades_Paquetes" Type="Int32" Nullable="false" />
+    <Property Name="Id_Nota" Type="Int32" />
+    <NavigationProperty Name="Cat_Familias_Productos" Relationship="Self.FK_Productos_Cat_Familias_Productos" FromRole="Productos" ToRole="Cat_Familias_Productos" />
+    <NavigationProperty Name="Cat_Grupos_Productos" Relationship="Self.FK_Productos_Cat_Grupos_Productos" FromRole="Productos" ToRole="Cat_Grupos_Productos" />
+    <NavigationProperty Name="Cat_Marcas_Prodcutos" Relationship="Self.FK_Productos_Cat_Marcas_Prodcutos" FromRole="Productos" ToRole="Cat_Marcas_Prodcutos" />
+    <NavigationProperty Name="Cat_Provedores" Relationship="Self.FK_Productos_Cat_Provedores" FromRole="Productos" ToRole="Cat_Provedores" />
+    <NavigationProperty Name="Cat_Tipos_Prodcutos" Relationship="Self.FK_Productos_Cat_Tipos_Prodcutos" FromRole="Productos" ToRole="Cat_Tipos_Prodcutos" />
+    <NavigationProperty Name="Nota" Relationship="Self.FK_Productos_Notas" FromRole="Productos" ToRole="Notas" />
+    <NavigationProperty Name="Precios_Prodcutos" Relationship="Self.FK_Productos_Precios_Prodcutos" FromRole="Productos" ToRole="Precios_Prodcutos" />
+    <NavigationProperty Name="Productos_Unidades_Paquetes" Relationship="Self.FK_Productos_Productos_Unidades_Paquetes" FromRole="Productos" ToRole="Productos_Unidades_Paquetes" />
+  </EntityType>
+  <EntityType Name="Productos_Unidades_Paquetes">
+    <Key>
+      <PropertyRef Name="Id_Unidades_Paquetes" />
+    </Key>
+    <Property Name="Id_Unidades_Paquetes" Type="Int32" Nullable="false" />
+    <Property Name="Tipo_Compra" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Piezas_Por_Paquete" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Productos" Relationship="Self.FK_Productos_Productos_Unidades_Paquetes" FromRole="Productos_Unidades_Paquetes" ToRole="Productos" />
+  </EntityType>
+  <Association Name="FK_Productos_Cat_Familias_Productos">
+    <End Role="Cat_Familias_Productos" Type="Self.Cat_Familias_Productos" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cat_Familias_Productos">
+        <PropertyRef Name="Id_Familia_Producto" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Familia_Producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Cat_Grupos_Productos">
+    <End Role="Cat_Grupos_Productos" Type="Self.Cat_Grupos_Productos" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cat_Grupos_Productos">
+        <PropertyRef Name="Id_Grupo_Producto" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Grupo_Producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Cat_Marcas_Prodcutos">
+    <End Role="Cat_Marcas_Prodcutos" Type="Self.Cat_Marcas_Prodcutos" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cat_Marcas_Prodcutos">
+        <PropertyRef Name="Id_Marca_Prodcuto" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Marca_Prodcuto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cat_Provedores_Notas1">
+    <End Role="Notas" Type="Self.Nota" Multiplicity="0..1" />
+    <End Role="Cat_Provedores" Type="Self.Cat_Provedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notas">
+        <PropertyRef Name="Id_Nota" />
+      </Principal>
+      <Dependent Role="Cat_Provedores">
+        <PropertyRef Name="Id_Nota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Cat_Provedores">
+    <End Role="Cat_Provedores" Type="Self.Cat_Provedores" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cat_Provedores">
+        <PropertyRef Name="Id_Proveedor" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Proveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Cat_Tipos_Prodcutos">
+    <End Role="Cat_Tipos_Prodcutos" Type="Self.Cat_Tipos_Prodcutos" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cat_Tipos_Prodcutos">
+        <PropertyRef Name="Id_Tipo_Prodcuto" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Tipo_Producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Precios_Prodcutos_Notas">
+    <End Role="Notas" Type="Self.Nota" Multiplicity="0..1" />
+    <End Role="Precios_Prodcutos" Type="Self.Precios_Prodcutos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notas">
+        <PropertyRef Name="Id_Nota" />
+      </Principal>
+      <Dependent Role="Precios_Prodcutos">
+        <PropertyRef Name="Id_Nota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Notas">
+    <End Role="Notas" Type="Self.Nota" Multiplicity="0..1" />
+    <End Role="Productos" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notas">
+        <PropertyRef Name="Id_Nota" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Nota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Precios_Prodcutos">
+    <End Role="Precios_Prodcutos" Type="Self.Precios_Prodcutos" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Precios_Prodcutos">
+        <PropertyRef Name="Id_Precios_Producto" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Precios_Producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Productos_Unidades_Paquetes">
+    <End Role="Productos_Unidades_Paquetes" Type="Self.Productos_Unidades_Paquetes" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos_Unidades_Paquetes">
+        <PropertyRef Name="Id_Unidades_Paquetes" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="Id_Unidades_Paquetes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LaPapeEntidades" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cat_Familias_Productos" EntityType="Self.Cat_Familias_Productos" />
+    <EntitySet Name="Cat_Grupos_Productos" EntityType="Self.Cat_Grupos_Productos" />
+    <EntitySet Name="Cat_Marcas_Prodcutos" EntityType="Self.Cat_Marcas_Prodcutos" />
+    <EntitySet Name="Cat_Provedores" EntityType="Self.Cat_Provedores" />
+    <EntitySet Name="Cat_Tipos_Prodcutos" EntityType="Self.Cat_Tipos_Prodcutos" />
+    <EntitySet Name="Notas" EntityType="Self.Nota" />
+    <EntitySet Name="Precios_Prodcutos" EntityType="Self.Precios_Prodcutos" />
+    <EntitySet Name="Productos" EntityType="Self.Producto" />
+    <EntitySet Name="Productos_Unidades_Paquetes" EntityType="Self.Productos_Unidades_Paquetes" />
+    <AssociationSet Name="FK_Productos_Cat_Familias_Productos" Association="Self.FK_Productos_Cat_Familias_Productos">
+      <End Role="Cat_Familias_Productos" EntitySet="Cat_Familias_Productos" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Cat_Grupos_Productos" Association="Self.FK_Productos_Cat_Grupos_Productos">
+      <End Role="Cat_Grupos_Productos" EntitySet="Cat_Grupos_Productos" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Cat_Marcas_Prodcutos" Association="Self.FK_Productos_Cat_Marcas_Prodcutos">
+      <End Role="Cat_Marcas_Prodcutos" EntitySet="Cat_Marcas_Prodcutos" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cat_Provedores_Notas1" Association="Self.FK_Cat_Provedores_Notas1">
+      <End Role="Notas" EntitySet="Notas" />
+      <End Role="Cat_Provedores" EntitySet="Cat_Provedores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Cat_Provedores" Association="Self.FK_Productos_Cat_Provedores">
+      <End Role="Cat_Provedores" EntitySet="Cat_Provedores" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Cat_Tipos_Prodcutos" Association="Self.FK_Productos_Cat_Tipos_Prodcutos">
+      <End Role="Cat_Tipos_Prodcutos" EntitySet="Cat_Tipos_Prodcutos" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Precios_Prodcutos_Notas" Association="Self.FK_Precios_Prodcutos_Notas">
+      <End Role="Notas" EntitySet="Notas" />
+      <End Role="Precios_Prodcutos" EntitySet="Precios_Prodcutos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Notas" Association="Self.FK_Productos_Notas">
+      <End Role="Notas" EntitySet="Notas" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Precios_Prodcutos" Association="Self.FK_Productos_Precios_Prodcutos">
+      <End Role="Precios_Prodcutos" EntitySet="Precios_Prodcutos" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Productos_Unidades_Paquetes" Association="Self.FK_Productos_Productos_Unidades_Paquetes">
+      <End Role="Productos_Unidades_Paquetes" EntitySet="Productos_Unidades_Paquetes" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="LaPapeModel.sysdiagram" />
+  </EntityContainer>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+</Schema>

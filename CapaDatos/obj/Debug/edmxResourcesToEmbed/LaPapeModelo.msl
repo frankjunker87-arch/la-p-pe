@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LaPapeModelStoreContainer" CdmEntityContainer="LaPapeEntidades">
+    <EntitySetMapping Name="Cat_Familias_Productos">
+      <EntityTypeMapping TypeName="LaPapeModel.Cat_Familias_Productos">
+        <MappingFragment StoreEntitySet="Cat_Familias_Productos">
+          <ScalarProperty Name="Id_Familia_Producto" ColumnName="Id_Familia_Producto" />
+          <ScalarProperty Name="Descripcion_Familia_Prodcuto" ColumnName="Descripcion_Familia_Prodcuto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cat_Grupos_Productos">
+      <EntityTypeMapping TypeName="LaPapeModel.Cat_Grupos_Productos">
+        <MappingFragment StoreEntitySet="Cat_Grupos_Productos">
+          <ScalarProperty Name="Id_Grupo_Producto" ColumnName="Id_Grupo_Producto" />
+          <ScalarProperty Name="Descripcion_Grupo_Producto" ColumnName="Descripcion_Grupo_Producto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cat_Marcas_Prodcutos">
+      <EntityTypeMapping TypeName="LaPapeModel.Cat_Marcas_Prodcutos">
+        <MappingFragment StoreEntitySet="Cat_Marcas_Prodcutos">
+          <ScalarProperty Name="Id_Marca_Prodcuto" ColumnName="Id_Marca_Prodcuto" />
+          <ScalarProperty Name="Descripcion_Marca_Prodcuto" ColumnName="Descripcion_Marca_Prodcuto" />
+          <ScalarProperty Name="Descripcion_Submarca_Prodcuto" ColumnName="Descripcion_Submarca_Prodcuto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cat_Provedores">
+      <EntityTypeMapping TypeName="LaPapeModel.Cat_Provedores">
+        <MappingFragment StoreEntitySet="Cat_Provedores">
+          <ScalarProperty Name="Id_Proveedor" ColumnName="Id_Proveedor" />
+          <ScalarProperty Name="Nombre_Proveedor" ColumnName="Nombre_Proveedor" />
+          <ScalarProperty Name="Direccion_1_Proveedor" ColumnName="Direccion_1_Proveedor" />
+          <ScalarProperty Name="Direccion_2_Proveedor" ColumnName="Direccion_2_Proveedor" />
+          <ScalarProperty Name="Direccion_3_Proveedor" ColumnName="Direccion_3_Proveedor" />
+          <ScalarProperty Name="Telefono_1_Provedor" ColumnName="Telefono_1_Provedor" />
+          <ScalarProperty Name="Telefono_2_Provedor" ColumnName="Telefono_2_Provedor" />
+          <ScalarProperty Name="Telefono_3_Provedor" ColumnName="Telefono_3_Provedor" />
+          <ScalarProperty Name="Id_Nota" ColumnName="Id_Nota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cat_Tipos_Prodcutos">
+      <EntityTypeMapping TypeName="LaPapeModel.Cat_Tipos_Prodcutos">
+        <MappingFragment StoreEntitySet="Cat_Tipos_Prodcutos">
+          <ScalarProperty Name="Id_Tipo_Prodcuto" ColumnName="Id_Tipo_Prodcuto" />
+          <ScalarProperty Name="Descripcion_Tipo_Prodcuto" ColumnName="Descripcion_Tipo_Prodcuto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notas">
+      <EntityTypeMapping TypeName="LaPapeModel.Nota">
+        <MappingFragment StoreEntitySet="Notas">
+          <ScalarProperty Name="Id_Nota" ColumnName="Id_Nota" />
+          <ScalarProperty Name="Nota1" ColumnName="Nota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Precios_Prodcutos">
+      <EntityTypeMapping TypeName="LaPapeModel.Precios_Prodcutos">
+        <MappingFragment StoreEntitySet="Precios_Prodcutos">
+          <ScalarProperty Name="Id_Precios_Producto" ColumnName="Id_Precios_Producto" />
+          <ScalarProperty Name="Costo_Mes_Actual" ColumnName="Costo_Mes_Actual" />
+          <ScalarProperty Name="Costo_Mes_Anterior" ColumnName="Costo_Mes_Anterior" />
+          <ScalarProperty Name="Costo_Unitario" ColumnName="Costo_Unitario" />
+          <ScalarProperty Name="Costo_Paqeute" ColumnName="Costo_Paqeute" />
+          <ScalarProperty Name="Min_Precio_Unidad_Publico" ColumnName="Min_Precio_Unidad_Publico" />
+          <ScalarProperty Name="Precio_Unidad_Publico" ColumnName="Precio_Unidad_Publico" />
+          <ScalarProperty Name="Porciento_Aplicado" ColumnName="Porciento_Aplicado" />
+          <ScalarProperty Name="Min_Precio_Paquete_Publico" ColumnName="Min_Precio_Paquete_Publico" />
+          <ScalarProperty Name="Precio_Paquete_Publico" ColumnName="Precio_Paquete_Publico" />
+          <ScalarProperty Name="Id_Nota" ColumnName="Id_Nota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos">
+      <EntityTypeMapping TypeName="LaPapeModel.Producto">
+        <MappingFragment StoreEntitySet="Productos">
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="Id_Producto" ColumnName="Id_Producto" />
+          <ScalarProperty Name="Id_Tipo_Producto" ColumnName="Id_Tipo_Producto" />
+          <ScalarProperty Name="Descripcion_Producto" ColumnName="Descripcion_Producto" />
+          <ScalarProperty Name="Tamaño_Producto" ColumnName="Tamaño_Producto" />
+          <ScalarProperty Name="Contenido_Prodcuto" ColumnName="Contenido_Prodcuto" />
+          <ScalarProperty Name="Id_Grupo_Producto" ColumnName="Id_Grupo_Producto" />
+          <ScalarProperty Name="Id_Familia_Producto" ColumnName="Id_Familia_Producto" />
+          <ScalarProperty Name="Id_Marca_Prodcuto" ColumnName="Id_Marca_Prodcuto" />
+          <ScalarProperty Name="Id_Precios_Producto" ColumnName="Id_Precios_Producto" />
+          <ScalarProperty Name="Id_Proveedor" ColumnName="Id_Proveedor" />
+          <ScalarProperty Name="Id_Unidades_Paquetes" ColumnName="Id_Unidades_Paquetes" />
+          <ScalarProperty Name="Id_Nota" ColumnName="Id_Nota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos_Unidades_Paquetes">
+      <EntityTypeMapping TypeName="LaPapeModel.Productos_Unidades_Paquetes">
+        <MappingFragment StoreEntitySet="Productos_Unidades_Paquetes">
+          <ScalarProperty Name="Id_Unidades_Paquetes" ColumnName="Id_Unidades_Paquetes" />
+          <ScalarProperty Name="Tipo_Compra" ColumnName="Tipo_Compra" />
+          <ScalarProperty Name="Piezas_Por_Paquete" ColumnName="Piezas_Por_Paquete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="LaPapeModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
