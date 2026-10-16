@@ -40,7 +40,7 @@ Sistema de gestión de productos desarrollado en **.NET Framework 4.5** con arqu
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/psehgaft/la-p-pe.git
+   git clone https://github.com/frankjunker87-arch/la-p-pe.git
    ```
 2. Abre `LaPape.sln` en Visual Studio (2015 o superior).
 3. Restaura los paquetes NuGet (`packages.config` en `CapaDatos`; también hay una copia local en `packages/`).
