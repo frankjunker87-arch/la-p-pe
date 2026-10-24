@@ -55,6 +55,7 @@
     <Compile Include="EF\EFBase.cs" />
     <Compile Include="EF\FamiliaProdcuto.cs" />
     <Compile Include="EF\GrupoProducto.cs" />
+    <Compile Include="EF\MarcaProducto.cs" />
     <Compile Include="EF\PreciosProductos.cs" />
     <Compile Include="EF\ProductoEF.cs" />
     <Compile Include="EF\Proveedor.cs" />

@@ -14,7 +14,7 @@ Sistema de gestión de productos desarrollado en **.NET Framework 4.5** con arqu
 |------|----------|-----------------|
 | Entidades | `Entidades` | Clases del modelo: `Producto`, `Cat_Grupos_Productos`, `Cat_Familias_Productos`, `Cat_Marcas_Prodcutos`, `Cat_Provedores`, `Cat_Tipos_Prodcutos`, `Precios_Prodcutos`, `Productos_Unidades_Paquetes`, `Nota` |
 | Datos | `CapaDatos` | Acceso a datos con Entity Framework 6.1.3 (Database First, `LaPapeModelo.edmx`) y ADO.NET |
-| Lógica | `CapaLogica` | Reglas de negocio: `ProductoLogica`, `GrupoLogica` (insertar, modificar, buscar por SKU, listar) |
+| Lógica | `CapaLogica` | Reglas de negocio: `ProductoLogica`, `GrupoLogica`, `MarcaLogica` (insertar, modificar, buscar, listar) |
 | Contratos | `Contratos` | Interfaces de los servicios WCF (`ILaPape` agrupa `IProducto`, `IGruposProducto`, `IFamiliasProdcuto`, `IMarcasProducto`, `INotas`, `IPreciosProducto`, `IProveedores`, `ITiposProducto`, `IUnidadesPaquetes`) |
 | Servicios | `Servicios` | Implementación del servicio (`LaPape : ILaPape`) y validador de usuario/contraseña |
 | Hospedaje | `ImplementacionesServicios` | Hospedaje WCF (`LaPape.svc`, `Web.config`) |
@@ -49,7 +49,7 @@ Sistema de gestión de productos desarrollado en **.NET Framework 4.5** con arqu
 
 ## 📝 Estado del proyecto
 
-Proyecto en desarrollo: varias operaciones del servicio (`Eliminar*` y búsquedas en `Servicios/LaPape.cs`) aún lanzan `NotImplementedException`. Las operaciones implementadas son las de `ProductoLogica` y `GrupoLogica` (insertar, modificar, buscar por SKU y listar).
+Proyecto en desarrollo: varias operaciones del servicio (`Eliminar*` y búsquedas en `Servicios/LaPape.cs`) aún lanzan `NotImplementedException`. Las operaciones implementadas son las de `ProductoLogica`, `GrupoLogica` y `MarcaLogica` (insertar, modificar, buscar y listar).
 
 ## 🤝 Cómo contribuir
 

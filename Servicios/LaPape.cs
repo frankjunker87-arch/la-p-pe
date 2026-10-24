@@ -10,10 +10,12 @@ namespace Servicios
     {
         private ProductoLogica contextoProdcuto;
         private GrupoLogica contextoGrupo;
+        private MarcaLogica contextoMarca;
 
         public LaPape()
         {
             contextoGrupo = new GrupoLogica();
+            contextoMarca = new MarcaLogica();
             contextoProdcuto = new ProductoLogica();
         }
 
@@ -79,7 +81,7 @@ namespace Servicios
 
         public Cat_Marcas_Prodcutos InsertarMarca(Cat_Marcas_Prodcutos marcaProducto)
         {
-            throw new NotImplementedException();
+            return contextoMarca.Insertar(marcaProducto);
         }
 
         public Nota InsertarNota(Nota nota)
@@ -125,7 +127,7 @@ namespace Servicios
 
         public IEnumerable<Cat_Marcas_Prodcutos> ListarMarca()
         {
-            throw new NotImplementedException();
+            return contextoMarca.Listar();
         }
 
         public IEnumerable<Nota> ListarNota()
@@ -170,7 +172,7 @@ namespace Servicios
 
         public Cat_Marcas_Prodcutos ModificarMarca(Cat_Marcas_Prodcutos marcaProducto)
         {
-            throw new NotImplementedException();
+            return contextoMarca.Modificar(marcaProducto);
         }
 
         public Nota ModificarNota(Nota nota)

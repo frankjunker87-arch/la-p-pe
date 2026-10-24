@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GrupoLogica.cs" />
+    <Compile Include="MarcaLogica.cs" />
     <Compile Include="ProductoLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
