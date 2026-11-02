@@ -11,11 +11,13 @@ namespace Servicios
         private ProductoLogica contextoProdcuto;
         private GrupoLogica contextoGrupo;
         private MarcaLogica contextoMarca;
+        private TipoLogica contextoTipo;
 
         public LaPape()
         {
             contextoGrupo = new GrupoLogica();
             contextoMarca = new MarcaLogica();
+            contextoTipo = new TipoLogica();
             contextoProdcuto = new ProductoLogica();
         }
 
@@ -106,7 +108,7 @@ namespace Servicios
 
         public Cat_Tipos_Prodcutos InsertarTipo(Cat_Tipos_Prodcutos tipoProducto)
         {
-            throw new NotImplementedException();
+            return contextoTipo.Insertar(tipoProducto);
         }
 
         public Productos_Unidades_Paquetes InsertarUnidadPaquete(Productos_Unidades_Paquetes unidadPaqueteProducto)
@@ -152,7 +154,7 @@ namespace Servicios
 
         public IEnumerable<Cat_Tipos_Prodcutos> ListarTipo()
         {
-            throw new NotImplementedException();
+            return contextoTipo.Listar();
         }
 
         public IEnumerable<Productos_Unidades_Paquetes> ListarUnidadPaquete()
@@ -197,7 +199,7 @@ namespace Servicios
 
         public Cat_Tipos_Prodcutos ModificarTipo(Cat_Tipos_Prodcutos tipoProducto)
         {
-            throw new NotImplementedException();
+            return contextoTipo.Modificar(tipoProducto);
         }
 
         public Productos_Unidades_Paquetes ModificarUnidadPaquete(Productos_Unidades_Paquetes unidadPaqueteProducto)

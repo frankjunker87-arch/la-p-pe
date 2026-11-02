@@ -59,6 +59,7 @@
     <Compile Include="EF\PreciosProductos.cs" />
     <Compile Include="EF\ProductoEF.cs" />
     <Compile Include="EF\Proveedor.cs" />
+    <Compile Include="EF\TipoProducto.cs" />
     <Compile Include="LaPapeModelo.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
