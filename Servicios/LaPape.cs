@@ -12,12 +12,14 @@ namespace Servicios
         private GrupoLogica contextoGrupo;
         private MarcaLogica contextoMarca;
         private TipoLogica contextoTipo;
+        private FamiliaLogica contextoFamilia;
 
         public LaPape()
         {
             contextoGrupo = new GrupoLogica();
             contextoMarca = new MarcaLogica();
             contextoTipo = new TipoLogica();
+            contextoFamilia = new FamiliaLogica();
             contextoProdcuto = new ProductoLogica();
         }
 
@@ -73,7 +75,7 @@ namespace Servicios
 
         public Cat_Familias_Productos InsertarFamilia(Cat_Familias_Productos familiaProducto)
         {
-            throw new NotImplementedException();
+            return contextoFamilia.Insertar(familiaProducto);
         }
 
         public Cat_Grupos_Productos InsertarGrupo(Cat_Grupos_Productos grupoProducto)
@@ -118,7 +120,7 @@ namespace Servicios
 
         public IEnumerable<Cat_Familias_Productos> ListarFamilia()
         {
-            throw new NotImplementedException();
+            return contextoFamilia.Listar();
         }
 
         public IEnumerable<Cat_Grupos_Productos> ListarGrupo()
@@ -164,7 +166,7 @@ namespace Servicios
 
         public Cat_Familias_Productos ModificarFamilia(Cat_Familias_Productos familiaProducto)
         {
-            throw new NotImplementedException();
+            return contextoFamilia.Modificar(familiaProducto);
         }
 
         public Cat_Grupos_Productos ModificarGrupo(Cat_Grupos_Productos grupoProducto)
